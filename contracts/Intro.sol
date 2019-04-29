@@ -18,10 +18,10 @@ contract Casino {
 	// Create a constructor here!
 	// The constructor will be used to configure different parameters you might want to
 	// initialize with the creation of the contract (i.e. minimum bet, max amount of bets, etc.)
-	constructor (uint _numberOfBets, uint _maxAmountOfBets) public {
+	constructor (uint _numberOfBets, uint _minimumBet, uint _totalBet, uint _maxAmountOfBets) public {
 		owner = msg.sender;
 		// YOUR CODE HERE
-		pool = 0;
+		pool = _totalBet;
 		numberOfBets = _numberOfBets;
 		maxAmountOfBets = _maxAmountOfBets;
 		minimumBet = _minimumBet;
