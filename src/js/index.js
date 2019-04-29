@@ -10,7 +10,7 @@ class App extends React.Component {
          numberOfBets: 0,
          minimumBet: 0,
          totalBet: 0,
-         maxAmountOfBets: 0,
+         maxAmountOfBets: 2,
          plugInInstalled: true
       }
 
@@ -182,7 +182,7 @@ class App extends React.Component {
       "type": "function"
    }
    ]);
-         this.state.ContractInstance = MyContract.at("0x01ace3f9ba36d86d7d71bf63d37ac4e0cc06de98");
+         this.state.ContractInstance = MyContract.at("0x676f7e62c565ed48bfa8548772704a6b1e0735a8");
          window.a = this.state;
       } else {
          console.log("No web3 detected. Falling back to http://localhost:8545. You should remove this fallback when you live, as it's inherently insecure. Consider switching to Metamask for development. More info here: http://truffleframework.com/tutorials/truffle-and-metamask");
