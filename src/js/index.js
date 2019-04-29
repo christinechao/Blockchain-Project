@@ -109,6 +109,48 @@ class App extends React.Component {
    {
       "constant": true,
       "inputs": [],
+      "name": "maxAmountOfBets",
+      "outputs": [
+         {
+            "name": "",
+            "type": "uint256"
+         }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+   },
+   {
+      "constant": true,
+      "inputs": [],
+      "name": "minimumBet",
+      "outputs": [
+         {
+            "name": "",
+            "type": "uint256"
+         }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+   },
+   {
+      "constant": true,
+      "inputs": [],
+      "name": "numberOfBets",
+      "outputs": [
+         {
+            "name": "",
+            "type": "uint256"
+         }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+   },
+   {
+      "constant": true,
+      "inputs": [],
       "name": "pool",
       "outputs": [
          {
@@ -119,9 +161,28 @@ class App extends React.Component {
       "payable": false,
       "stateMutability": "view",
       "type": "function"
+   },
+   {
+      "constant": true,
+      "inputs": [
+         {
+            "name": "",
+            "type": "uint256"
+         }
+      ],
+      "name": "winners",
+      "outputs": [
+         {
+            "name": "",
+            "type": "address"
+         }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
    }
    ]);
-         this.state.ContractInstance = MyContract.at("0xc65c742103994cd5480e13bd9c9c9ba7f01e04c2");
+         this.state.ContractInstance = MyContract.at("0xfda8f40a6703bd0aecadd17fafafcc8e21de99a0");
          window.a = this.state;
       } else {
          console.log("No web3 detected. Falling back to http://localhost:8545. You should remove this fallback when you live, as it's inherently insecure. Consider switching to Metamask for development. More info here: http://truffleframework.com/tutorials/truffle-and-metamask");

@@ -5,10 +5,10 @@ contract Casino {
 	address owner;
 	//YOUR CODE HERE
 	uint public pool;
-	uint numberOfBets;
-	uint minimumBet;
-	uint maxAmountOfBets;
-	address payable[] winners;
+	uint public numberOfBets;
+	uint public minimumBet;
+	uint public maxAmountOfBets;
+	address payable[] public winners;
 	address payable [] public addrKeys;
 
 	//private variables for each user
