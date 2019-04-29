@@ -151,7 +151,7 @@ class App extends React.Component {
    {
       "constant": true,
       "inputs": [],
-      "name": "pool",
+      "name": "totalBet",
       "outputs": [
          {
             "name": "",
@@ -182,7 +182,7 @@ class App extends React.Component {
       "type": "function"
    }
    ]);
-         this.state.ContractInstance = MyContract.at("0xfda8f40a6703bd0aecadd17fafafcc8e21de99a0");
+         this.state.ContractInstance = MyContract.at("0x01ace3f9ba36d86d7d71bf63d37ac4e0cc06de98");
          window.a = this.state;
       } else {
          console.log("No web3 detected. Falling back to http://localhost:8545. You should remove this fallback when you live, as it's inherently insecure. Consider switching to Metamask for development. More info here: http://truffleframework.com/tutorials/truffle-and-metamask");
@@ -303,7 +303,7 @@ class App extends React.Component {
 
                <hr></hr>
 
-               <h2>Vote for the next winning number yeee</h2>
+               <h2>Vote for the next winning number yeee Updated</h2>
 
                <label>
                   <b>How much Ether do you want to bet? <input className="bet-input" ref="ether-bet" type="number" placeholder={this.state.minimumBet}/></b> ether

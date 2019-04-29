@@ -4,7 +4,7 @@ contract Casino {
 	// Add different class variables here that you might need to use to store data
 	address owner;
 	//YOUR CODE HERE
-	uint public pool;
+	uint public totalBet;
 	uint public numberOfBets;
 	uint public minimumBet;
 	uint public maxAmountOfBets;
@@ -21,7 +21,7 @@ contract Casino {
 	constructor (uint _numberOfBets, uint _minimumBet, uint _totalBet, uint _maxAmountOfBets) public {
 		owner = msg.sender;
 		// YOUR CODE HERE
-		pool = _totalBet;
+		totalBet = _totalBet;
 		numberOfBets = _numberOfBets;
 		maxAmountOfBets = _maxAmountOfBets;
 		minimumBet = _minimumBet;
@@ -55,7 +55,7 @@ contract Casino {
 		require(isIn(msg.sender) == false );
 		require(msg.value > minimumBet);
 		addrKeys.push(msg.sender);
-		pool += msg.value;
+		totalBet += msg.value;
 		individualTotalBetAmount[msg.sender] += msg.value;
 		individualNumber[msg.sender] = numberToBet;
 		numberOfBets += 1;
@@ -84,7 +84,7 @@ contract Casino {
 		}
 		//Transfer prize money to all winners
 		for(uint i = 0; i < winners.length; i++) {
-			winners[i].transfer(pool * 95 / 100 / winners.length);
+			winners[i].transfer(totalBet * 95 / 100 / winners.length);
 		}
 		resetData();
 	}
@@ -92,7 +92,7 @@ contract Casino {
 	// Reset the data of the Smart Contract here!
 	function resetData() public {
 		// YOUR CODE HERE
-		pool = 0;
+		totalBet = 0;
 		numberOfBets = 0;
 		delete winners;
 		delete addrKeys;
