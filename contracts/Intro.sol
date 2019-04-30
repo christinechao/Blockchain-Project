@@ -33,6 +33,7 @@ contract Casino {
 	// have them run only when the modifier is true, as seen with the generateWinningNumber function
 	modifier onEndGame(){
 		if (numberOfBets >= maxAmountOfBets) {
+		    _;
 		    distributePrizes();
 		    resetData();
 		}
